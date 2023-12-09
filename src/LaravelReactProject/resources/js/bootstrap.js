@@ -1,5 +1,5 @@
 // import _ from 'lodash';
-window._ = _;
+// window._ = _;
 window._ = require("lodash");
 
 /**
