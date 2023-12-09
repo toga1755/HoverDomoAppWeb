@@ -17,3 +17,10 @@ mix.js("resources/js/app.js", "public/js")
     ])
     .react()
     .sass("resources/sass/app.scss", "public/css");
+
+mix.browserSync({
+    files: ["resources/views/**/*.blade.php", "public/**/*.*"],
+    proxy: {
+        target: "http://my-domain.dev/",
+    },
+});
