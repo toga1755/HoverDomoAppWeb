@@ -23,4 +23,5 @@ mix.browserSync({
     proxy: {
         target: "http://my-domain.dev/",
     },
+    open: false,
 });
