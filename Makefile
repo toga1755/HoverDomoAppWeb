@@ -1,6 +1,6 @@
 start :
 	docker compose up -d --build
-	docker-compose exec php /bin/bash -c "cd LaravelReactProject && cp .env.example .env &&php artisan key:generate"
+	docker-compose exec php /bin/bash -c "cd LaravelReactProject  && composer dump-autoload && cp .env.example .env && php artisan key:generate "
 	docker-compose exec node /bin/sh -c "cd LaravelReactProject && rm -rf node_modules && rm -rf package-lock.json && npm cache clear --force"
 	docker-compose exec node /bin/sh -c "cd LaravelReactProject && npm install && npm run dev"
 
