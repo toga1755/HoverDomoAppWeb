@@ -1,3 +1,0 @@
-function topNotice() {
-    return <>s</>;
-}

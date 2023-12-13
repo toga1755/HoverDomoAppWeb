@@ -6,18 +6,16 @@ import { Box, Container, Grid } from "@mui/material";
 
 function Home() {
     return (
-        <Box style={{ width: "100%", height: "100%" }}>
-            <Box
-                sx={{
-                    display: "grid",
-                    gridTemplateRows: "0.0001fr 1fr 1.5fr",
-                    height: "100%",
-                }}
-            >
-                <Header />
-                <Box sx={{ bgcolor: "red" }}></Box>
-                <Box sx={{ bgcolor: "green" }}></Box>
-            </Box>
+        <Box
+            style={{ width: "100%", height: "100%" }}
+            sx={{
+                display: "grid",
+                gridTemplateRows: "0.0001fr 1fr 1.3fr",
+            }}
+        >
+            <Header />
+            <TopNotice />
+            <TopMenu />
         </Box>
     );
 }
