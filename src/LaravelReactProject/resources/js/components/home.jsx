@@ -19,7 +19,9 @@ function Home() {
                 <Box sx={{ height: "40%" }}>
                     <TopNotice />
                 </Box>
-                <Box sx={{ height: "50%", bgcolor: "yellow" }}>aaa</Box>
+                <Box sx={{ height: "50%" }}>
+                    <TopMenu />
+                </Box>
             </Box>
         </>
     );
