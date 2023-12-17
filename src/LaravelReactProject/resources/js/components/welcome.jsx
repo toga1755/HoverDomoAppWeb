@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./home";
+import NoticeList from "./notice/notice_list";
 import About from "./about";
 import Nomatch from "./nomatch";
 
@@ -11,7 +12,7 @@ function App() {
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/notice" element={<About />} />
+                    <Route path="/notice_list" element={<NoticeList />} />
                     <Route path="/notice/:id" element={<About />} />
                     <Route path="/opeInfo" element={<About />} />
                     <Route path="/fare" element={<About />} />

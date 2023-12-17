@@ -1,5 +1,6 @@
 import { Box, Button } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
+import { useNavigate } from "react-router-dom";
 
 const menus = [
     {
@@ -37,6 +38,7 @@ const menus = [
 ];
 
 function TopMenuButton(props) {
+    const navigate = useNavigate();
     return (
         <Button
             variant="text"
@@ -47,10 +49,15 @@ function TopMenuButton(props) {
                 fontWeight: "lighter",
                 color: "white",
             }}
+            onClick={() => navigate(props.url)}
         >
             {props.text}
         </Button>
     );
+}
+
+function redirect() {
+    navigate;
 }
 
 export default function TopMenu() {
@@ -63,28 +70,28 @@ export default function TopMenu() {
                 border: "0.5px solid black",
             }}
         >
-            <Grid item xs={4} sx={{ border: "0.5px solid black" }}>
+            <Grid xs={4} sx={{ border: "0.5px solid black" }}>
                 <TopMenuButton {...menus[0]} />
             </Grid>
-            <Grid item xs={4} sx={{ border: "0.5px solid black" }}>
+            <Grid xs={4} sx={{ border: "0.5px solid black" }}>
                 <TopMenuButton {...menus[1]} />
             </Grid>
-            <Grid item xs={4} sx={{ border: "0.5px solid black" }}>
+            <Grid xs={4} sx={{ border: "0.5px solid black" }}>
                 <TopMenuButton {...menus[2]} />
             </Grid>
-            <Grid item xs={4} sx={{ border: "0.5px solid black" }}>
+            <Grid xs={4} sx={{ border: "0.5px solid black" }}>
                 <TopMenuButton {...menus[3]} />
             </Grid>
-            <Grid item xs={4} sx={{ border: "0.5px solid black" }}>
+            <Grid xs={4} sx={{ border: "0.5px solid black" }}>
                 <TopMenuButton {...menus[4]} />
             </Grid>
-            <Grid item xs={4} sx={{ border: "0.5px solid black" }}>
+            <Grid xs={4} sx={{ border: "0.5px solid black" }}>
                 <TopMenuButton {...menus[5]} />
             </Grid>
-            <Grid item xs={4} sx={{ border: "0.5px solid black" }}>
+            <Grid xs={4} sx={{ border: "0.5px solid black" }}>
                 <TopMenuButton {...menus[6]} />
             </Grid>
-            <Grid item xs={8} sx={{ border: "0.5px solid black" }}>
+            <Grid xs={8} sx={{ border: "0.5px solid black" }}>
                 <TopMenuButton {...menus[7]} />
             </Grid>
         </Grid>
