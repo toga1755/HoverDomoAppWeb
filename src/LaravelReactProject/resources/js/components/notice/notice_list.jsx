@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../header/header";
-import { Box, Typography } from "@mui/material";
+import { Box, IconButton, Typography } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 const notices = [
@@ -176,7 +176,9 @@ function NoticeContent(props) {
                     alignItems: "center",
                 }}
             >
-                <ArrowForwardIosIcon sx={{}} />
+                <IconButton>
+                    <ArrowForwardIosIcon sx={{}} />
+                </IconButton>
             </Box>
         </Box>
     );
