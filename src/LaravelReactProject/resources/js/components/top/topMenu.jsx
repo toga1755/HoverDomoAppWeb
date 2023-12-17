@@ -56,10 +56,6 @@ function TopMenuButton(props) {
     );
 }
 
-function redirect() {
-    navigate;
-}
-
 export default function TopMenu() {
     return (
         <Grid

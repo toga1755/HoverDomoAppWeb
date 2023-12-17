@@ -4,7 +4,7 @@ import TopNotice from "./top/topNotice";
 import TopMenu from "./top/topMenu";
 import { Box } from "@mui/material";
 
-function Home() {
+export default function HomePage() {
     return (
         <>
             <Box
@@ -26,4 +26,3 @@ function Home() {
     );
 }
 
-export default Home;
