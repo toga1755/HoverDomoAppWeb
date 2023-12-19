@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../header/header";
 import { Box, IconButton, Typography } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { useNavigate } from "react-router-dom";
 import { noticeInfo } from "./notices_constant";
 
 export default function NoticeListPage() {
@@ -47,6 +48,7 @@ function NoticeList() {
 }
 
 function NoticeContent(props) {
+    const navigate = useNavigate();
     return (
         <Box
             sx={{
@@ -106,6 +108,7 @@ function NoticeContent(props) {
                     justifyContent: "right",
                     alignItems: "center",
                 }}
+                onClick={() => navigate("/notice/" + props.id)}
             >
                 <IconButton>
                     <ArrowForwardIosIcon sx={{}} />

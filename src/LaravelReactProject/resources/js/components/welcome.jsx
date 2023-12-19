@@ -5,6 +5,7 @@ import HomePage from "./home";
 import NoticeListPage from "./notice/notice_list";
 import About from "./about";
 import Nomatch from "./nomatch";
+import NoticeDetailPage from "./notice/notice_detail";
 
 function App() {
     return (
@@ -13,7 +14,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/notice_list" element={<NoticeListPage />} />
-                    <Route path="/notice/:id" element={<About />} />
+                    <Route path="/notice/:id" element={<NoticeDetailPage />} />
                     <Route path="/opeInfo" element={<About />} />
                     <Route path="/fare" element={<About />} />
                     <Route path="/inquiry" element={<About />} />
