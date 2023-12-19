@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./header/header";
+import HeaderNotBack from "./header/header_no_back";
 import TopNotice from "./top/topNotice";
 import TopMenu from "./top/topMenu";
 import { Box } from "@mui/material";
@@ -14,7 +15,7 @@ export default function HomePage() {
                     height: "100%",
                 }}
             >
-                <Header />
+                <HeaderNotBack />
                 <Box sx={{ height: "40%" }}>
                     <TopNotice />
                 </Box>

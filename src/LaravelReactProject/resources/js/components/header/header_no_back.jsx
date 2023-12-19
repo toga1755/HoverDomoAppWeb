@@ -9,7 +9,6 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import { useNavigate } from "react-router-dom";
 
 function Contents() {
-    const navigate = useNavigate();
     return (
         <Box
             sx={{
@@ -26,9 +25,8 @@ function Contents() {
                 width: "inherit",
             }}
         >
-            <IconButton sx={{}} onClick={() => navigate(-1)}>
-                <ArrowBackIosIcon sx={{ color: "white" }} />
-            </IconButton>
+            <ArrowBackIosIcon sx={{ color: "transparent" }} />
+
             <Typography
                 variant="h6"
                 component="div"
@@ -57,4 +55,3 @@ export default function ButtonAppBar() {
         </Box>
     );
 }
-
