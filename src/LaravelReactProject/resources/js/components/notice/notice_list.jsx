@@ -3,8 +3,8 @@ import Header from "../header/header";
 import { Box, IconButton, Typography } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { useNavigate } from "react-router-dom";
-import { noticeInfo } from "./notices_constant";
-import { defaultColor } from "../../style/color_constant";
+import { noticeInfo } from "../../constant/notices_constant";
+import { defaultColor } from "../../constant/color_constant";
 
 export default function NoticeListPage() {
     return (
