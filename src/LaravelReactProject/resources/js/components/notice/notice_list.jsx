@@ -2,87 +2,9 @@ import React from "react";
 import Header from "../header/header";
 import { Box, IconButton, Typography } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-
-const notices = [
-    {
-        id: 1,
-        title: "タイトルあああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ",
-        content:
-            "本文1ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ",
-        image: "/img/ive.png",
-    },
-    {
-        id: 2,
-        title: "タイトル2",
-        content: "本文2",
-        image: "/img/sakura.webp",
-    },
-    {
-        id: 3,
-        title: "タイトル3",
-        content: "本文3",
-    },
-    {
-        id: 4,
-        title: "タイトル4",
-        content: "本文4",
-    },
-    {
-        id: 5,
-        title: "タイトル5",
-        content: "本文5",
-    },
-    {
-        id: 6,
-        title: "タイトル6",
-        content: "本文6",
-    },
-    {
-        id: 7,
-        title: "タイトル7",
-        content: "本文7",
-    },
-    {
-        id: 8,
-        title: "タイトル8",
-        content: "本文8",
-    },
-    {
-        id: 9,
-        title: "タイトル9",
-        content: "本文9",
-    },
-    {
-        id: 10,
-        title: "タイトル10",
-        content: "本文10",
-    },
-    {
-        id: 11,
-        title: "タイトル11",
-        content: "本文11",
-    },
-    {
-        id: 12,
-        title: "タイトル12",
-        content: "本文12",
-    },
-    {
-        id: 13,
-        title: "タイトル13",
-        content: "本文13",
-    },
-    {
-        id: 14,
-        title: "タイトル14",
-        content: "本文14",
-    },
-    {
-        id: 15,
-        title: "タイトル15",
-        content: "本文15",
-    },
-];
+import { useNavigate } from "react-router-dom";
+import { noticeInfo } from "./notices_constant";
+import { defaultColor } from "../../style/color_constant";
 
 export default function NoticeListPage() {
     return (
@@ -99,7 +21,7 @@ export default function NoticeListPage() {
                 <Box
                     sx={{
                         height: "89.4%",
-                        bgcolor: "#fdf2d0",
+                        bgcolor: defaultColor,
                         paddingTop: "10px",
                         paddingBottom: "10px",
                     }}
@@ -119,7 +41,7 @@ function NoticeList() {
                 overflow: "scroll",
             }}
         >
-            {notices.map((notice) => (
+            {noticeInfo.map((notice) => (
                 <NoticeContent key={notice.id} {...notice} />
             ))}
         </Box>
@@ -127,6 +49,7 @@ function NoticeList() {
 }
 
 function NoticeContent(props) {
+    const navigate = useNavigate();
     return (
         <Box
             sx={{
@@ -186,6 +109,7 @@ function NoticeContent(props) {
                     justifyContent: "right",
                     alignItems: "center",
                 }}
+                onClick={() => navigate("/notice/" + props.id)}
             >
                 <IconButton>
                     <ArrowForwardIosIcon sx={{}} />
