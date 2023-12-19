@@ -67,7 +67,7 @@ function TopNoticeContent(props) {
                     sx={{
                         width: "100%",
                         height: "20%",
-                        overflow: "scroll",
+                        overflow: "auto",
                         fontSize: "16px",
                     }}
                 >
@@ -81,7 +81,7 @@ function TopNoticeContent(props) {
                         marginTop: "10px",
                         width: "100%",
                         height: "75%",
-                        overflow: "scroll",
+                        overflow: "auto",
                         fontSize: "12px",
                     }}
                 >
