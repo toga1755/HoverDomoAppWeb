@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../header/header";
 import { Box, IconButton, Typography } from "@mui/material";
 import { defaultColor } from "../../constant/color_constant";
-import { orange } from "@mui/material/colors";
+import { opeInfos } from "../../constant/ope_constant";
 
 export default function OpeInfoPage() {
     return (
@@ -45,5 +45,52 @@ function OpeTitle() {
 }
 
 function OpeInfoList() {
-    return <Box></Box>;
+    if (opeInfos.length == 0) {
+        return <OpeInfoContentEmpty></OpeInfoContentEmpty>;
+    }
+    return (
+        <Box>
+            {opeInfos.map((opeInfo) => (
+                <OpeInfoContent key={opeInfo.id} {...opeInfo} />
+            ))}
+        </Box>
+    );
+}
+
+function OpeInfoContent(props) {
+    return (
+        <Box
+            sx={{
+                minHeight: "13vh",
+                bgcolor: defaultColor,
+                borderBottom: "1px solid black",
+                display: "flex",
+                justifyContent: "left",
+                alignItems: "center",
+                padding: "20px",
+            }}
+        >
+            <Typography sx={{ fontSize: "16px" }}>{props.content}</Typography>
+        </Box>
+    );
+}
+
+function OpeInfoContentEmpty() {
+    return (
+        <Box
+            sx={{
+                minHeight: "13vh",
+                bgcolor: defaultColor,
+                borderBottom: "1px solid black",
+                display: "flex",
+                justifyContent: "left",
+                alignItems: "center",
+                padding: "20px",
+            }}
+        >
+            <Typography sx={{ fontSize: "16px" }}>
+                運行状況はありません。
+            </Typography>
+        </Box>
+    );
 }
