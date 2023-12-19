@@ -1,7 +1,7 @@
 import { Box, Button, Typography, rgbToHex } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { noticeInfo } from "../notice/notices_constant";
-import { defaultColor } from "../../style/color_constant";
+import { noticeInfo } from "../../constant/notices_constant";
+import { defaultColor } from "../../constant/color_constant";
 
 export default function topNotice() {
     const noticeInfoLength = noticeInfo.length;

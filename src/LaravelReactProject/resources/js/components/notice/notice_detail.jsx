@@ -1,10 +1,10 @@
 import React from "react";
 import Header from "../header/header";
 import { Box, Typography } from "@mui/material";
-import { noticeInfo } from "./notices_constant";
+import { noticeInfo } from "../../constant/notices_constant";
 import { useLocation } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import { defaultColor } from "../../style/color_constant";
+import { defaultColor } from "../../constant/color_constant";
 
 export default function NoticeDetailPage() {
     return (
