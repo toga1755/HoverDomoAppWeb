@@ -1,22 +1,9 @@
 import { Box, Button, Typography, rgbToHex } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { noticeInfo } from "../notice/notices_constant";
 
 export default function topNotice() {
-    const notices = [
-        {
-            title: "タイトル",
-            content:
-                "本文1ああああああああああああああああああああああああああああああああああああああああああああああああ",
-        },
-        {
-            title: "タイトル2",
-            content: "本文2",
-        },
-        {
-            title: "タイトル3",
-            content: "本文3",
-        },
-    ];
+    const noticeInfoLength = noticeInfo.length;
     return (
         //お知らせの部分
         // 色指定
@@ -39,9 +26,9 @@ export default function topNotice() {
                         height: "80%",
                     }}
                 >
-                    <TopNoticeContent {...notices[0]} />
-                    <TopNoticeContent {...notices[1]} />
-                    <TopNoticeContent {...notices[2]} />
+                    <TopNoticeContent {...noticeInfo[noticeInfoLength - 1]} />
+                    <TopNoticeContent {...noticeInfo[noticeInfoLength - 2]} />
+                    <TopNoticeContent {...noticeInfo[noticeInfoLength - 3]} />
                 </Box>
                 {/* もっと見るボタン */}
                 <Box sx={{ height: "10%" }}>
