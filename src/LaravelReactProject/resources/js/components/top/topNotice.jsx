@@ -1,6 +1,7 @@
 import { Box, Button, Typography, rgbToHex } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { noticeInfo } from "../notice/notices_constant";
+import { defaultColor } from "../../style/color_constant";
 
 export default function topNotice() {
     const noticeInfoLength = noticeInfo.length;
@@ -10,7 +11,7 @@ export default function topNotice() {
         <>
             <Box
                 sx={{
-                    bgcolor: "#fdf2d0",
+                    bgcolor: defaultColor,
                     padding: "20px",
                     display: "flex",
                     flexDirection: "column",

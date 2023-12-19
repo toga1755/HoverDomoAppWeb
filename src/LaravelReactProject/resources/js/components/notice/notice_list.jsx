@@ -4,6 +4,7 @@ import { Box, IconButton, Typography } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { useNavigate } from "react-router-dom";
 import { noticeInfo } from "./notices_constant";
+import { defaultColor } from "../../style/color_constant";
 
 export default function NoticeListPage() {
     return (
@@ -20,7 +21,7 @@ export default function NoticeListPage() {
                 <Box
                     sx={{
                         height: "89.4%",
-                        bgcolor: "#fdf2d0",
+                        bgcolor: defaultColor,
                         paddingTop: "10px",
                         paddingBottom: "10px",
                     }}
