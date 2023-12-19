@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const menus = [
     {
         text: "運行情報",
-        url: "/",
+        url: "/opeInfo",
     },
     {
         text: "料金表",
