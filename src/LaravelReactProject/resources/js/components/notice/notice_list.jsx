@@ -9,11 +9,13 @@ const notices = [
         title: "タイトルあああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ",
         content:
             "本文1ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ",
+        image: "/img/ive.png",
     },
     {
         id: 2,
         title: "タイトル2",
         content: "本文2",
+        image: "/img/sakura.webp",
     },
     {
         id: 3,
@@ -141,9 +143,18 @@ function NoticeContent(props) {
                 sx={{
                     height: "100%",
                     width: "30%",
-                    bgcolor: "blue",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
                 }}
-            ></Box>
+            >
+                <img
+                    src={props.image}
+                    // src="/img/ive.png"
+                    alt="画像"
+                    style={{ height: "100%", width: "auto" }}
+                />
+            </Box>
             {/* テキストのボックス */}
             <Box sx={{ width: "60%", paddingLeft: "15px" }}>
                 {/* タイトル */}
