@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./home";
+import HomePage from "./home";
+import NoticeListPage from "./notice/notice_list";
 import About from "./about";
 import Nomatch from "./nomatch";
 
@@ -10,8 +11,8 @@ function App() {
         <React.StrictMode>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/notice" element={<About />} />
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/notice_list" element={<NoticeListPage />} />
                     <Route path="/notice/:id" element={<About />} />
                     <Route path="/opeInfo" element={<About />} />
                     <Route path="/fare" element={<About />} />

@@ -1,4 +1,5 @@
 import { Box, Button, Typography, rgbToHex } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 export default function topNotice() {
     const notices = [
@@ -107,6 +108,7 @@ function TopNoticeContent(props) {
 
 //お知らせ一覧ボタン
 function TopNoticeButton() {
+    const navigate = useNavigate();
     return (
         <Box
             sx={{
@@ -115,6 +117,7 @@ function TopNoticeButton() {
                 alignItems: "flex-end",
                 padding: "10px",
             }}
+            onClick={() => navigate("/notice_list")}
         >
             <Button>
                 <Typography

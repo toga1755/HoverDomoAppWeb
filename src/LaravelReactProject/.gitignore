@@ -19,3 +19,4 @@ yarn-error.log
 /public/js/*
 /public/css/*
 /public/css
+.DS_Store
