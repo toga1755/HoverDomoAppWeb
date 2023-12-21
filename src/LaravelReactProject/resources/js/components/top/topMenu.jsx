@@ -13,7 +13,7 @@ const menus = [
     },
     {
         text: "時刻表",
-        url: "/",
+        url: "/timetable",
     },
     {
         text: "お問い合わせ",
