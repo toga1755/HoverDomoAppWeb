@@ -7,7 +7,7 @@ export const timeTableInfoWeekday = [
     {
         id: 2,
         destination: "大分市行き",
-        timeTableImg: "/img/sakura.webp",
+        timeTableImg: "/img/timetable.png",
     },
 ];
 

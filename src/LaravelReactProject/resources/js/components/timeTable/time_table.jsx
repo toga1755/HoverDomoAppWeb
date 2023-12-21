@@ -62,7 +62,7 @@ function TimeTableTitle(props) {
                 alignItems: "center",
             }}
         >
-            <Typography sx={{ fontSize: "22px" }}>{props.title}</Typography>
+            <Typography sx={{ fontSize: "20px" }}>{props.title}</Typography>
         </Box>
     );
 }
