@@ -2,10 +2,7 @@ import React from "react";
 import Header from "../header/header";
 import { Box, IconButton, Typography } from "@mui/material";
 import { defaultColor } from "../../constant/color_constant";
-import {
-    timeTableInfoWeekday,
-    timeTableInfoSatSunHoliday,
-} from "../../constant/time_tables_constant";
+import { division_days } from "../../constant/time_tables_constant";
 import ArrowRightOutlinedIcon from "@mui/icons-material/ArrowRightOutlined";
 import { useNavigate } from "react-router-dom";
 
@@ -22,19 +19,25 @@ export default function TimeTablePage() {
                 <Header />
                 {/* ヘッダーが89.4% */}
                 <Box sx={{ height: "100%" }}>
-                    <TimeTableTitle title={"平日"}></TimeTableTitle>
-                    {/* 平日の時刻表一覧 */}
-                    {timeTableInfoWeekday.map((timeTable) => (
-                        <TimeTableButton key={timeTable.id} {...timeTable} />
-                    ))}
-                    <TimeTableTitle title={"土日祝"}></TimeTableTitle>
-                    {/* 土日祝の時刻表一覧 */}
-                    {timeTableInfoSatSunHoliday.map((timeTable) => (
-                        <TimeTableButton key={timeTable.id} {...timeTable} />
+                    {/* 平日または土日祝日でわける */}
+                    {division_days.map((divided) => (
+                        <TimeTableList key={divided.id} {...divided} />
                     ))}
                 </Box>
             </Box>
         </>
+    );
+}
+
+function TimeTableList(props) {
+    return (
+        <Box sx={{}}>
+            <TimeTableTitle title={props.displayName}></TimeTableTitle>
+
+            {props.infos.map((info) => (
+                <TimeTableButton key={info.id} name={props.name} {...info} />
+            ))}
+        </Box>
     );
 }
 
@@ -78,7 +81,9 @@ function TimeTableButton(props) {
                 sx={{
                     marginLeft: "auto",
                 }}
-                onClick={() => navigate("/timetable/" + props.id)}
+                onClick={() =>
+                    navigate("/timetable/" + props.name + "/" + props.id)
+                }
             >
                 <ArrowRightOutlinedIcon />
             </IconButton>

@@ -23,3 +23,18 @@ export const timeTableInfoSatSunHoliday = [
         timeTableImg: "/img/sakura.webp",
     },
 ];
+
+export const division_days = [
+    {
+        id: 1,
+        name: "weekday",
+        displayName: "平日",
+        infos: timeTableInfoWeekday,
+    },
+    {
+        id: 2,
+        name: "satsunholiday",
+        displayName: "土日祝",
+        infos: timeTableInfoSatSunHoliday,
+    },
+];

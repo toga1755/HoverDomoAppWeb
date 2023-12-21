@@ -22,7 +22,11 @@ function App() {
                     <Route path="/fare" element={<About />} />
                     <Route path="/timetable" element={<TimeTablePage />} />
                     <Route
-                        path="/timetable/:id"
+                        path="/timetable/weekday/:id"
+                        element={<TimeTableDetailPage />}
+                    />
+                    <Route
+                        path="/timetable/satsunholiday/:id"
                         element={<TimeTableDetailPage />}
                     />
                     <Route path="/inquiry" element={<About />} />
