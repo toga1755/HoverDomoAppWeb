@@ -7,8 +7,9 @@ import {
     timeTableInfoSatSunHoliday,
 } from "../../constant/time_tables_constant";
 import ArrowRightOutlinedIcon from "@mui/icons-material/ArrowRightOutlined";
+import { useNavigate } from "react-router-dom";
 
-export default function TimeTable() {
+export default function TimeTablePage() {
     return (
         <>
             <Box
@@ -57,7 +58,7 @@ function TimeTableTitle(props) {
 }
 
 function TimeTableButton(props) {
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
     return (
         <Box
             sx={{
@@ -77,7 +78,7 @@ function TimeTableButton(props) {
                 sx={{
                     marginLeft: "auto",
                 }}
-                // onClick={() => navigate("/timetable/" + props.id)}
+                onClick={() => navigate("/timetable/" + props.id)}
             >
                 <ArrowRightOutlinedIcon />
             </IconButton>

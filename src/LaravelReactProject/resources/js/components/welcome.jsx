@@ -7,7 +7,8 @@ import About from "./about";
 import Nomatch from "./nomatch";
 import NoticeDetailPage from "./notice/notice_detail";
 import OpeInfoPage from "./opeInfo/ope_info";
-import TimeTable from "./timeTable/time_table";
+import TimeTablePage from "./timeTable/time_table";
+import TimeTableDetailPage from "./timeTable/time_table_detail";
 
 function App() {
     return (
@@ -19,7 +20,11 @@ function App() {
                     <Route path="/notice/:id" element={<NoticeDetailPage />} />
                     <Route path="/opeInfo" element={<OpeInfoPage />} />
                     <Route path="/fare" element={<About />} />
-                    <Route path="/timetable" element={<TimeTable />} />
+                    <Route path="/timetable" element={<TimeTablePage />} />
+                    <Route
+                        path="/timetable/:id"
+                        element={<TimeTableDetailPage />}
+                    />
                     <Route path="/inquiry" element={<About />} />
                     <Route path="/reserve" element={<About />} />
                     <Route path="/account" element={<About />} />
