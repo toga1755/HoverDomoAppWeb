@@ -19,7 +19,7 @@ export default function TimeTablePage() {
                 <Header />
                 {/* ヘッダーが89.4% */}
                 <Box sx={{ height: "100%" }}>
-                    {/* 平日または土日祝日でわける */}
+                    {/* 平日または土日祝日で分ける */}
                     {division_days.map((divided) => (
                         <TimeTableList key={divided.id} {...divided} />
                     ))}
@@ -32,10 +32,17 @@ export default function TimeTablePage() {
 function TimeTableList(props) {
     return (
         <Box sx={{}}>
+            {/* 平日または土日祝日のタイトル */}
             <TimeTableTitle title={props.displayName}></TimeTableTitle>
-
+            {/* 平日または土日祝日の時刻表の情報を渡す */}
             {props.infos.map((info) => (
-                <TimeTableButton key={info.id} name={props.name} {...info} />
+                <TimeTableButton
+                    key={info.id}
+                    dividedId={props.id}
+                    name={props.name}
+                    displayName={props.displayName}
+                    {...info}
+                />
             ))}
         </Box>
     );
@@ -82,7 +89,8 @@ function TimeTableButton(props) {
                     marginLeft: "auto",
                 }}
                 onClick={() =>
-                    navigate("/timetable/" + props.name + "/" + props.id)
+                    // 平日か土日祝か・行き先・画像を渡す
+                    navigate("/timetable/" + props.dividedId + "/" + props.id)
                 }
             >
                 <ArrowRightOutlinedIcon />

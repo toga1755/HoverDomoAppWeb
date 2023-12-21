@@ -20,15 +20,14 @@ function App() {
                     <Route path="/notice/:id" element={<NoticeDetailPage />} />
                     <Route path="/opeInfo" element={<OpeInfoPage />} />
                     <Route path="/fare" element={<About />} />
-                    <Route path="/timetable" element={<TimeTablePage />} />
-                    <Route
-                        path="/timetable/weekday/:id"
-                        element={<TimeTableDetailPage />}
-                    />
-                    <Route
-                        path="/timetable/satsunholiday/:id"
-                        element={<TimeTableDetailPage />}
-                    />
+                    <Route path="/timetable">
+                        <Route index={true} element={<TimeTablePage />} />
+                        <Route
+                            path=":divitiondaysId/:destinationId"
+                            element={<TimeTableDetailPage />}
+                        />
+                    </Route>
+
                     <Route path="/inquiry" element={<About />} />
                     <Route path="/reserve" element={<About />} />
                     <Route path="/account" element={<About />} />
