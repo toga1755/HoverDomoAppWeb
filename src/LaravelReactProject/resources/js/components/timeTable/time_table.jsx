@@ -2,6 +2,11 @@ import React from "react";
 import Header from "../header/header";
 import { Box, IconButton, Typography } from "@mui/material";
 import { defaultColor } from "../../constant/color_constant";
+import {
+    timeTableInfoWeekday,
+    timeTableInfoSatSunHoliday,
+} from "../../constant/time_tables_constant";
+import ArrowRightOutlinedIcon from "@mui/icons-material/ArrowRightOutlined";
 
 export default function TimeTable() {
     return (
@@ -17,9 +22,15 @@ export default function TimeTable() {
                 {/* ヘッダーが89.4% */}
                 <Box sx={{ height: "100%" }}>
                     <TimeTableTitle title={"平日"}></TimeTableTitle>
-                    <TimeTableList></TimeTableList>
+                    {/* 平日の時刻表一覧 */}
+                    {timeTableInfoWeekday.map((timeTable) => (
+                        <TimeTableButton key={timeTable.id} {...timeTable} />
+                    ))}
                     <TimeTableTitle title={"土日祝"}></TimeTableTitle>
-                    <TimeTableList></TimeTableList>
+                    {/* 土日祝の時刻表一覧 */}
+                    {timeTableInfoSatSunHoliday.map((timeTable) => (
+                        <TimeTableButton key={timeTable.id} {...timeTable} />
+                    ))}
                 </Box>
             </Box>
         </>
@@ -40,12 +51,13 @@ function TimeTableTitle(props) {
                 alignItems: "center",
             }}
         >
-            <Typography sx={{ fontSize: "24px" }}>{props.title}</Typography>
+            <Typography sx={{ fontSize: "22px" }}>{props.title}</Typography>
         </Box>
     );
 }
 
-function TimeTableList() {
+function TimeTableButton(props) {
+    // const navigate = useNavigate();
     return (
         <Box
             sx={{
@@ -58,7 +70,17 @@ function TimeTableList() {
                 padding: "20px",
             }}
         >
-            <Typography sx={{ fontSize: "16px" }}>{"aa"}</Typography>
+            <Typography sx={{ fontSize: "16px" }}>
+                {props.destination}
+            </Typography>
+            <IconButton
+                sx={{
+                    marginLeft: "auto",
+                }}
+                // onClick={() => navigate("/timetable/" + props.id)}
+            >
+                <ArrowRightOutlinedIcon />
+            </IconButton>
         </Box>
     );
 }
