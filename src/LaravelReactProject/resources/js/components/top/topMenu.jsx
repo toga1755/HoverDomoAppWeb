@@ -17,7 +17,7 @@ const menus = [
     },
     {
         text: "お問い合わせ",
-        url: "/",
+        url: "/inquiry",
     },
     {
         text: "予約",
