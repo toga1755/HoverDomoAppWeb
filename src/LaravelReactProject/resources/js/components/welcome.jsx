@@ -9,6 +9,7 @@ import NoticeDetailPage from "./notice/notice_detail";
 import OpeInfoPage from "./opeInfo/ope_info";
 import TimeTablePage from "./timeTable/time_table";
 import TimeTableDetailPage from "./timeTable/time_table_detail";
+import InquiryPage from "./inquiry/inquiry";
 
 function App() {
     return (
@@ -28,7 +29,7 @@ function App() {
                         />
                     </Route>
 
-                    <Route path="/inquiry" element={<About />} />
+                    <Route path="/inquiry" element={<InquiryPage />} />
                     <Route path="/reserve" element={<About />} />
                     <Route path="/account" element={<About />} />
                     <Route path="/login" element={<About />} />
