@@ -4,6 +4,7 @@ import { defaultColor } from "../../constant/color_constant";
 import { Typography } from "@mui/material";
 import { useForm } from "react-hook-form";
 import TextField from "@mui/material/TextField";
+import { useNavigate } from "react-router-dom";
 
 const formUrl =
     "https://docs.google.com/forms/u/0/d/e/1FAIpQLSc4-gCb1VIwfREnw2xxQWTkviWrjLULrQia1mK0UTPEHDIoxA/formResponse";
@@ -21,6 +22,7 @@ export default function InquiryContent() {
         watch,
         formState: { errors },
     } = useForm();
+    const navigate = useNavigate();
 
     const onSubmit = async (data) => {
         try {
@@ -36,8 +38,15 @@ export default function InquiryContent() {
             });
 
             // 成功後の処理を記述する (画面遷移とか)
+            alert("送信しました");
+            navigate("/");
         } catch (e) {
+            alert(
+                "送信に失敗しました。通信状況などを確認して、もう一度お試しください。"
+            );
+
             console.log(e);
+            console.log("ここ");
         }
     };
 
