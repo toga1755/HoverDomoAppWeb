@@ -2,8 +2,7 @@ import React from "react";
 import { Box, Button } from "@mui/material";
 import { defaultColor } from "../../constant/color_constant";
 import { Typography } from "@mui/material";
-import { useForm, SubmitHandler } from "react-hook-form";
-import { Input } from "@mui/base/Input";
+import { useForm } from "react-hook-form";
 import TextField from "@mui/material/TextField";
 
 const formUrl =
@@ -60,7 +59,11 @@ export default function InquiryContent() {
                             type="text"
                             aria-label="名前入力"
                             placeholder="氏名"
-                            {...register("name", { required: true })}
+                            helperText={errors.name?.message}
+                            FormHelperTextProps={{ style: { color: "red" } }}
+                            {...register("name", {
+                                required: "名前を入力してください",
+                            })}
                             variant="filled"
                             sx={{ height: "100%", width: "70%" }}
                             inputProps={{
@@ -78,10 +81,14 @@ export default function InquiryContent() {
                         }}
                     >
                         <TextField
-                            type="text"
+                            type="email"
                             aria-label="メールアドレス入力"
                             placeholder="メールアドレス"
-                            {...register("email", { required: true })}
+                            helperText={errors.email?.message}
+                            FormHelperTextProps={{ style: { color: "red" } }}
+                            {...register("email", {
+                                required: "メールアドレスを入力してください",
+                            })}
                             variant="filled"
                             sx={{ height: "100%", width: "70%" }}
                             inputProps={{
@@ -104,7 +111,11 @@ export default function InquiryContent() {
                             type="text"
                             aria-label="内容入力"
                             placeholder="内容"
-                            {...register("content", { required: true })}
+                            helperText={errors.content?.message}
+                            FormHelperTextProps={{ style: { color: "red" } }}
+                            {...register("content", {
+                                required: "内容を入力してください",
+                            })}
                             variant="filled"
                             sx={{ height: "100%", width: "70%" }}
                             inputProps={{
