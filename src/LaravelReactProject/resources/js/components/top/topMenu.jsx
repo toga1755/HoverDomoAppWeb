@@ -9,7 +9,7 @@ const menus = [
     },
     {
         text: "料金表",
-        url: "/",
+        url: "/pricelist",
     },
     {
         text: "時刻表",
