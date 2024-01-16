@@ -10,6 +10,7 @@ import OpeInfoPage from "./opeInfo/ope_info";
 import TimeTablePage from "./timeTable/time_table";
 import TimeTableDetailPage from "./timeTable/time_table_detail";
 import InquiryPage from "./inquiry/inquiry";
+import PricePage from "./pricelist/pricelist";
 
 function App() {
     return (
@@ -20,7 +21,7 @@ function App() {
                     <Route path="/notice_list" element={<NoticeListPage />} />
                     <Route path="/notice/:id" element={<NoticeDetailPage />} />
                     <Route path="/opeInfo" element={<OpeInfoPage />} />
-                    <Route path="/fare" element={<About />} />
+                    <Route path="/pricelist" element={<PricePage />} />
                     <Route path="/timetable">
                         <Route index={true} element={<TimeTablePage />} />
                         <Route
