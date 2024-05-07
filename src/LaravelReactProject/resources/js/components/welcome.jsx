@@ -11,6 +11,9 @@ import TimeTablePage from "./timeTable/time_table";
 import TimeTableDetailPage from "./timeTable/time_table_detail";
 import InquiryPage from "./inquiry/inquiry";
 import PricePage from "./pricelist/pricelist";
+import AccountPage from "./account/account";
+import LoginPage from "./account/login";
+import SigupPage from "./account/sigup";
 
 function App() {
     return (
@@ -32,9 +35,9 @@ function App() {
 
                     <Route path="/inquiry" element={<InquiryPage />} />
                     <Route path="/reserve" element={<About />} />
-                    <Route path="/account" element={<About />} />
-                    <Route path="/login" element={<About />} />
-                    <Route path="/signup" element={<About />} />
+                    <Route path="/account" element={<AccountPage />} />
+                    <Route path="/account/login" element={<LoginPage />} />
+                    <Route path="/account/signup" element={<SigupPage />} />
                     <Route path="/logout" element={<About />} />
                     <Route path="*" element={<Nomatch />} />
                 </Routes>
