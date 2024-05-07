@@ -33,7 +33,7 @@ const menus = [
     },
     {
         text: "アカウント",
-        url: "/",
+        url: "/account",
     },
 ];
 
