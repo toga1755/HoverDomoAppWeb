@@ -129,7 +129,7 @@ export default function InquiryContent() {
                             sx={{ height: "100%", width: "70%" }}
                             inputProps={{
                                 style: {
-                                    height: "20%",
+                                    // height: "20%",
                                     bgcolor: "red",
                                 },
                             }}

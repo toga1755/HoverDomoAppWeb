@@ -13,7 +13,8 @@ import InquiryPage from "./inquiry/inquiry";
 import PricePage from "./pricelist/pricelist";
 import AccountPage from "./account/account";
 import LoginPage from "./account/login";
-import SigupPage from "./account/sigup";
+import SignupPage from "./account/signup";
+import SignupConfirmationPage from "./account/signup_confirmation";
 
 function App() {
     return (
@@ -37,7 +38,8 @@ function App() {
                     <Route path="/reserve" element={<About />} />
                     <Route path="/account" element={<AccountPage />} />
                     <Route path="/account/login" element={<LoginPage />} />
-                    <Route path="/account/signup" element={<SigupPage />} />
+                    <Route path="/account/signup" element={<SignupPage />} />
+                    <Route path="/account/signup_confirmation" element={<SignupConfirmationPage />} />
                     <Route path="/logout" element={<About />} />
                     <Route path="*" element={<Nomatch />} />
                 </Routes>
