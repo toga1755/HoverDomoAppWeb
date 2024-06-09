@@ -21,7 +21,7 @@ const menus = [
     },
     {
         text: "予約",
-        url: "/",
+        url: "/booking",
     },
     {
         text: "予約確認",
