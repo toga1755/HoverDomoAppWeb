@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { useLocation } from 'react-router-dom';
 import { useTheme } from '@mui/material/styles';
 
-export default function BookingConfirmationPage() {  
+export default function BookingConfirmationSamplePage() {  
     return (
         <>
             <Box
@@ -19,15 +19,15 @@ export default function BookingConfirmationPage() {
             >
                 <Header />
                 {/* ヘッダーが89.4% */}
-                <BookingConfirmationTitle></BookingConfirmationTitle>
+                <BookingConfirmationSampleTitle></BookingConfirmationSampleTitle>
 
-                <BookingConfirmationContent></BookingConfirmationContent>
+                <BookingConfirmationSampleContent></BookingConfirmationSampleContent>
             </Box>
         </>
     );
 }
 
-function BookingConfirmationTitle() {
+function BookingConfirmationSampleTitle() {
     return (
         <Box
             sx={{
@@ -46,10 +46,8 @@ function BookingConfirmationTitle() {
     );
 }
 
-function BookingConfirmationContent() {
+function BookingConfirmationSampleContent() {
     const navigate = useNavigate();
-    const location = useLocation();
-    const { selectedDate, selectedOption, selectedOption2, number, selectedOption3 } = location.state;
     
     const typographyStyle = {
         marginBottom: 2,
@@ -74,11 +72,11 @@ function BookingConfirmationContent() {
                     alignItems: 'flex-start',
                 }}
             >
-                <Typography sx={typographyStyle}>予約日: {selectedDate ? selectedDate.toLocaleDateString() : '2000/01/01'}</Typography>
-                <Typography sx={typographyStyle}>行き先: {selectedOption ? selectedOption : '大分空港行き'}</Typography>
-                <Typography sx={typographyStyle}>時間: {selectedOption2 ? selectedOption2 : '10:00'}</Typography>
-                <Typography sx={typographyStyle}>人数: {number ? number : '1'}</Typography>
-                <Typography sx={typographyStyle}>支払方法: {selectedOption3 ? selectedOption3 : 'クレジットカード'}</Typography>
+                <Typography sx={typographyStyle}>予約日: 2000/01/01</Typography>
+                <Typography sx={typographyStyle}>行き先: 大分空港行き</Typography>
+                <Typography sx={typographyStyle}>時間: 10:00</Typography>
+                <Typography sx={typographyStyle}>人数: 1</Typography>
+                <Typography sx={typographyStyle}>支払方法: クレジットカード</Typography>
             </Box>
             <Box
                 sx={{
