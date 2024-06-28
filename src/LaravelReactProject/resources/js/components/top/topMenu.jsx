@@ -25,7 +25,7 @@ const menus = [
     },
     {
         text: "予約確認",
-        url: "/",
+        url: "/booking/booking_confirmation_sample",
     },
     {
         text: "カメラ",

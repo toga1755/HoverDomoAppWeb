@@ -17,6 +17,7 @@ import SignupPage from "./account/signup";
 import SignupConfirmationPage from "./account/signup_confirmation";
 import BookingPage from "./booking/booking";
 import BookingConfirmationPage from "./booking/booking_confirmation";
+import BookingConfirmationSamplePage from "./booking/booking_confirmation_sample";
 
 function App() {
     return (
@@ -44,6 +45,7 @@ function App() {
                     <Route path="/account/signup_confirmation" element={<SignupConfirmationPage />} />
                     <Route path="/booking" element={<BookingPage />} />
                     <Route path="/booking/booking_confirmation" element={<BookingConfirmationPage />} />
+                    <Route path="/booking/booking_confirmation_sample" element={<BookingConfirmationSamplePage />} />
                     <Route path="/logout" element={<About />} />
                     <Route path="*" element={<Nomatch />} />
                 </Routes>
