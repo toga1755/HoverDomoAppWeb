@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import HomePage from "./index";
+import HomePage from "./home";
 import NoticeListPage from "./notice/notice_list";
 import About from "./about";
 import Nomatch from "./nomatch";
