@@ -10,7 +10,7 @@
         "prod": "npm run production",
         "production": "mix --production",
         "rm": "rm -rf docs",
-        "mv": "mv build docs",
+        "mv": "mv public docs",
         "git": "git add . && git commit && git push origin main",
         "predeploy": "npm run prod && npm run rm && npm run mv",
         "deploy": "gh-pages -d docs"
